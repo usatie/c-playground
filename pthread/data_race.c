@@ -6,7 +6,7 @@
 /*   By: susami <susami@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 18:05:19 by susami            #+#    #+#             */
-/*   Updated: 2022/10/17 18:11:52 by susami           ###   ########.fr       */
+/*   Updated: 2022/10/26 21:22:46 by susami           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,9 @@ void	*racyFunc(void *arg)
 
 int	main(void)
 {
-	pthread_t	t1, t2, t3;
+	pthread_t	t1, t2;
 
+	//racyFunc(NULL);
 	pthread_create(&t1, NULL, racyFunc, NULL);
 	pthread_create(&t2, NULL, racyFunc, NULL);
 	pthread_join(t1, NULL);
