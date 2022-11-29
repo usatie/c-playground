@@ -61,6 +61,8 @@ void	print_stat(struct stat *buf)
 	printf("    Last file Modification : %s", ctime(&buf->st_mtime));
 	printf("  st_ctime: %ld\n", buf->st_ctime);
 	printf("    Last status Change     : %s", ctime(&buf->st_ctime));
+	printf("  st_birthtime: %ld\n", buf->st_birthtime);
+	printf("    File Creation Time     : %s", ctime(&buf->st_birthtime));
 }
 
 void	test_stat(const char *filepath)
