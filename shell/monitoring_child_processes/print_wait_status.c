@@ -7,6 +7,7 @@
 #include <string.h>
 #include <sys/wait.h>
 
+void	print_wait_status(const char *msg, int status);
 
 /* printf() is not async-signal-safe. As such, this function
    is also not async-signal-safe. 
